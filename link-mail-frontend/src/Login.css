@@ -15,6 +15,13 @@ body {
   overflow: hidden;
   font-family: 'Exo', sans-serif;
 }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
 .ring {
   position: relative;
   width: 500px;
@@ -22,11 +29,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.1s ease-in-out;
 }
 
 .ring.scale {
-  transform: scale(2.2);
+  transform: scale(3.0);
 }
 
 .ring i {

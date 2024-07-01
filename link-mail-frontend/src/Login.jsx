@@ -7,8 +7,8 @@ function Login() {
   const [showLogin, setShowLogin] = useState(true);
 
   const handleSignUpClick = () => {
-    setScaleRings(true);
-    setShowLogin(false);
+    setScaleRings(!scaleRings);
+    setShowLogin(!showLogin);
   };
 
   return (
@@ -36,13 +36,41 @@ function Login() {
             </div>
           </div>
         )}
-        </div>
         {!showLogin && (
-          <div className='signUp'>
-            <h2 style={{fontFamily: 'Exo', fontWeight: 'normal'}}></h2>
+          <div className='login'>
+            <h2 style={{fontFamily: 'Exo', fontWeight: 'normal', fontSize: 20}}>sign up</h2>
+            <div className='row'>
+              <div className='inputBx'>
+                <input style={{height: 1,fontSize: 10, borderWidth: 0.5}} type="text" placeholder='first name'/>
+              </div>
+              <div className='inputBx'>
+                <input style={{height: 1, fontSize: 10, borderWidth: 0.5}} type="text" placeholder='last name'/>
+              </div>
+            </div>
+            <div className='inputBx'>
+              <input style={{height: 1, fontSize: 10, borderWidth: 0.5}} type="text" placeholder='username'/>
+            </div>
+            <div className='inputBx'>
+              <input style={{height: 1, fontSize: 10, borderWidth: 0.5}} type="text" placeholder='email'/>
+            </div>
+            <div className='row'>
+              <div className='inputBx'>
+                <input style={{height: 1, fontSize: 10, borderWidth: 0.5}} type="text" placeholder='password'/>
+              </div>
+              <div className='inputBx'>
+                <input style={{height: 1, fontSize: 10, borderWidth: 0.5}} type="text" placeholder='confirm password'/>
+              </div>
+            </div>
+            
+            <button style={{height: 1, width: 100}} className='animatedButton'><a style={{fontFamily: 'Exo', color: '#fff', fontSize: 10, position:'absolute', bottom: 2, left: 30}}>Continue</a></button>
+
+            <div className="links">
+              <a style={{fontFamily:'Exo' , fontWeight:'normal'}} href="#"></a>
+              <a style={{fontFamily: 'Exo', fontWeight:'normal'}} href="#" onClick={handleSignUpClick}>sign in</a>
+            </div>
           </div>
         )}
-      
+      </div>
     </>
   );
 }
